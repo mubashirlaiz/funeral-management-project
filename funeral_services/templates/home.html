@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funeral Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+      .navbar {
+            background-color: #4684cf;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        .nav-link:hover {
+            color: #ffc107;
+        }
+
+        /* Main Content */
+        .container {
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #343a40;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 400px; /* Set the height of the carousel images */
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        .carousel-caption h2, .carousel-caption p {
+            color: #fff;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Funeral Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#cremation">Cremation Services</a></li>
+                            <li><a class="dropdown-item" href="#burial">Burial Services</a></li>
+                            <li><a class="dropdown-item" href="#memorial">Memorial Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'employee_register' %}">Employee</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    
+    </nav>
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images\home.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome to Funeral Management System</h2>
+                    <p>We provide compassionate and comprehensive funeral services tailored to meet your needs.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images\dffg.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Choose from Our Services</h2>
+                    <p>Explore our cremation, burial, and memorial services designed to honor your loved ones.</p>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <h1>Welcome to Funeral Management System</h1>
+        <p class="lead">We provide compassionate and comprehensive funeral services tailored to meet your needs.</p> -->
+        
+        <hr>
+        <h2 id="cremation">Cremation Services</h2>
+        <p>Our cremation services offer a dignified and respectful way to honor your loved ones. Choose from our various packages, including:</p>
+        <ul>
+            <li>Basic Package: Includes essential cremation services</li>
+            <li>Standard Package: Additional features such as memorial urn and cremation ceremony</li>
+            <li>Premium Package: Customized options with personalized tributes and keepsakes</li>
+        </ul>
+        <p>Why choose us for cremation services:</p>
+        <ul>
+            <li>Experienced and compassionate staff</li>
+            <li>Flexible packages to suit your budget and preferences</li>
+            <li>Transparent pricing with no hidden fees</li>
+            <li>24/7 support and assistance</li>
+        </ul>
+        <hr>
+        <h2 id="burial">Burial Services</h2>
+        <p>Our burial services provide a traditional and meaningful way to honor the memory of your loved ones. Explore our burial packages, including:</p>
+        <ul>
+            <li>Ground Interment: Traditional burial with cemetery plot</li>
+            <li>Mausoleum Entombment: Above-ground burial in a mausoleum</li>
+            <li>Natural Burial: Environmentally-friendly options for eco-conscious families</li>
+        </ul>
+        <p>Why choose us for burial services:</p>
+        <ul>
+            <li>Beautiful and serene burial locations</li>
+            <li>Personalized ceremonies and tributes</li>
+            <li>Professional care and attention to detail</li>
+            <li>Assistance with all aspects of funeral planning</li>
+        </ul>
+        <hr>
+        <h2 id="memorial">Memorial Services</h2>
+        <p>Our memorial services offer a meaningful way to celebrate and remember the life of your loved one. Choose from various options, including:</p>
+        <ul>
+            <li>Indoor Memorial Service: Held at a chapel or funeral home</li>
+            <li>Outdoor Memorial Service: Held at a scenic location or park</li>
+            <li>Virtual Memorial Service: Livestreamed or recorded for remote attendees</li>
+        </ul>
+        <p>Why choose us for memorial services:</p>
+        <ul>
+            <li>Flexible and customizable options to honor your loved one</li>
+            <li>Professional guidance and support throughout the planning process</li>
+            <li>Personalized tributes and multimedia presentations</li>
+            <li>Compassionate and caring staff to assist you every step of the way</li>
+        </ul>
+    </div>
+     <!-- Contact Section -->
+     <div id="contact" class="container mt-5">
+        <h2>Contact Details</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+        <ul>
+            <li>Email: example@example.com</li>
+            <li>Phone: +1234567890</li>
+            <li>Address: 123 Funeral Ave, City, Country</li>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

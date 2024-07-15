@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="{% url 'user_registration' %}">
+        {% csrf_token %}
+        <h2>User Registration</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="caste">Caste:</label>
+        <input type="text" id="caste" name="caste" required>
+
+        <label for="current_location">Current Location:</label>
+        <input type="text" id="current_location" name="current_location" required>
+
+        <label for="funeral_location">Funeral Location:</label>
+        <input type="text" id="funeral_location" name="funeral_location" required>
+
+        <label for="has_relatives">Has Relatives:</label>
+        <input type="checkbox" id="has_relatives" name="has_relatives">
+
+        
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+

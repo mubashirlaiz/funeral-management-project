@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Funeral Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom styles here */
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Funeral Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'legal_documentation' %}">Legal Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Book Funeral Services</h1>
+        <p class="lead">Choose from our available funeral packages and customize services according to your requirements.</p>
+
+        <!-- Example funeral packages -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/basic.jpg' %}" class="card-img-top" alt="Basic Package Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Basic Package</h5>
+                        <p class="card-text">Includes essential funeral services</p>
+                        <a href="http://127.0.0.1:8000/funeral/pakagedet/1" class="btn btn-primary">Select</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/standard.jpg' %}" class="card-img-top" alt="Standard Package Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Package</h5>
+                        <p class="card-text">Additional features such as memorial service and floral arrangements</p>
+                        <a href="http://127.0.0.1:8000/funeral/pakagedet/2" class="btn btn-primary">Select</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/premium.jpg' %}" class="card-img-top" alt="Premium Package Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Package</h5>
+                        <p class="card-text">Customized options with personalized tributes and keepsakes</p>
+                        <a href="http://127.0.0.1:8000/funeral/pakagedet/3" class="btn btn-primary">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

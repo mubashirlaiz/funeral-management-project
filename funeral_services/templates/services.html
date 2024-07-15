@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funeral Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Our Funeral Services</h1>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images\cremation services.jpeg' %}" class="card-img-top" alt="Cremation Services">
+                <div class="card-body">
+                    <h5 class="card-title">Cremation Services</h5>
+                    <p class="card-text">Our cremation services offer a dignified and respectful way to honor your loved ones.</p>
+                    <a href="#"class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images\burial.jpg' %}" class="card-img-top" alt="Burial Services">
+                <div class="card-body">
+                    <h5 class="card-title">Burial Services</h5>
+                    <p class="card-text">Our burial services provide a traditional and meaningful way to honor the memory of your loved ones.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images\memorial.jpg' %}" class="card-img-top" alt="Memorial Services">
+                <div class="card-body">
+                    <h5 class="card-title">Memorial Services</h5>
+                    <p class="card-text">Our memorial services offer a meaningful way to celebrate and remember the life of your loved one.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

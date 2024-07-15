@@ -1,0 +1,53 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Funeral Management System{% endblock %}</title>
+    <!-- Link to Bootstrap CSS (either CDN or local) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    
+    
+</head>
+<body>
+    <header class="bg-dark text-light p-3">
+        <div class="container">
+            <h1 class="mb-0">Funeral Management System</h1>
+            <nav>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="{% url 'home' %}" class="text-light">Home</a></li>
+                    <li class="list-inline-item"><a href="{% url 'book_funeral' %}" class="text-light">Book Funeral</a></li>
+                    <li class="list-inline-item"><a href="{% url 'legal_documentation' %}" class="text-light">Submit Legal Documentation</a></li>
+                    
+                    
+                        <li class="list-inline-item"><a href="{% url 'user_logout' %}" class="text-light">Logout</a></li>
+                    
+                        <!-- <li class="list-inline-item"><a href="" class="text-light">Login</a></li> -->
+                        <!-- <li class="list-inline-item"><a href="" class="text-light">Register</a></li> -->
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container mt-3">
+        
+    </main>
+
+    <footer class="bg-dark text-light p-3">
+        <div class="container">
+            <!-- Add footer content here -->
+        </div>
+    </footer>
+
+    <!-- Link to Bootstrap JS (either CDN or local) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add your custom JavaScript link or script tag for additional functionality -->
+    <script src=""></script>
+
+</body>
+
+
+</html>
+

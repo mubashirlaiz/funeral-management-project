@@ -1,0 +1,154 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funeral Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+      .navbar {
+            background-color: #4684cf;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        .nav-link:hover {
+            color: #ffc107;
+        }
+
+        /* Main Content */
+        .container {
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #343a40;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            color: #343a40;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        /* Add custom styles here */
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Funeral Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                     -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Services</a>
+                        
+                    </li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        Contact
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">+91 9895302159<br>
+                            Our care team is available 24/7 for you
+                            </a></li>
+                        
+                        
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    </nav>
+    
+
+    <div class="container mt-5">
+        <h1>Cremation Services Your Family Can Trust</h1>
+        
+           <h4> Our simple, direct cremation services can be made by phone or online with help from a family care specialist. With our services, there's no need to visit a funeral home.</h4>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Register for Services</h5>
+                        <p class="card-text">Register for funeral services, provide necessary details, and customize packages.</p>
+                        <a href="{% url 'user_registration' %}" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Funeral Services</h5>
+                        <p class="card-text">Browse available funeral packages and book services according to your requirements.</p>
+                        <a href="{% url 'book_funeral' %}" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Legal Documentation</h5>
+                        <p class="card-text">Complete legal documentation post-death and manage necessary paperwork.</p>
+                        <a href="{% url 'legal_documentation' %}" class="btn btn-primary">Learn More</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
